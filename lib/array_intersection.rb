@@ -1,14 +1,10 @@
 def intersection(list1, list2)
   hash = {}
   intersections = []
-  list1.each do |element|
-    hash[element] = true
-  end
+  list1.each { |element| hash[element] = true }
 
   list2.each do |element|
-    if hash[element]
-      intersections << element
-    end
+    intersections << element if hash[element]
   end
 
   return intersections
