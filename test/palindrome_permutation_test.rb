@@ -1,7 +1,7 @@
 require_relative "test_helper"
 
 describe "palindrome_permutation?" do
-  it "will work for hello" do
+  it "will not work for hello" do
     expect(palindrome_permutation?("hello")).must_equal false
   end
 
