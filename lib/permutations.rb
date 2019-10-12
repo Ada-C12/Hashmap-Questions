@@ -9,7 +9,7 @@ def permutations?(string1, string2)
       hash[char] += 1
     end
   end
-
+  
   string2.each_char do |char|
     if hash[char].nil?
       return false
