@@ -13,7 +13,7 @@ def permutations?(string1, string2)
     end
     index += 1
   end
-
+  
   index = 0
   while index != string2.length
     if letter_hash.has_key?(string2[index]) == false
@@ -23,9 +23,6 @@ def permutations?(string1, string2)
     end
     index += 1
   end
-
-  if letter_hash.values.sum == 0
-    return true
-  else return false
-  end
+  
+  return letter_hash.values.sum == 0
 end
