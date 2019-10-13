@@ -10,8 +10,5 @@ def palindrome_permutation?(string)
     end
     index += 1
   end
-  if hash.values.sum == 1 || hash.values.sum == 0
-    return true
-  else return false
-  end
+  return hash.values.sum == 1 || hash.values.sum == 0
 end
