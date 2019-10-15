@@ -10,6 +10,7 @@ def permutations?(string1, string2)
       hash[letter] = 1
     end 
   end
+
   string2.each do |letter|
     if hash[letter] != nil
       hash[letter] -= 1
@@ -17,6 +18,7 @@ def permutations?(string1, string2)
       hash[letter] = -1
     end
   end
+  
   hash.each do |letter, count|
     if count != 0
       return false
