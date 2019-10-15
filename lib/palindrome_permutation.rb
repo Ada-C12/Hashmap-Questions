@@ -9,16 +9,16 @@ def palindrome_permutation?(string)
     end
   end
   
-  results = []
+  result = []
   if string.length.even?
     string.each_char do |char|
-      results << char if hash[char].odd?
+      result << char if hash[char].odd?
     end
-    return results.length == 0
+    return result.length == 0
   else
     string.each_char do |char|
-      results << char if hash[char].odd?
+      result << char if hash[char].odd?
     end
-    return results.length == 1
+    return result.length == 1
   end
 end
