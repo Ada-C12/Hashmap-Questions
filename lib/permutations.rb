@@ -7,12 +7,10 @@ def permutations?(string1, string2)
       hash[character] += 1
     end
   end
-  p hash
   
   string2.each_char do |letter|
     if hash.has_key?(letter) && hash[letter] > 0
       hash[letter] -= 1
-      p hash
     else
       return false
     end
