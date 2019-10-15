@@ -10,7 +10,7 @@ def palindrome_permutation?(string)
   end
   
   results = []
-  if string.length % 2 == 0
+  if string.length.even?
     string.each_char do |char|
       results << char if hash[char].odd?
     end
@@ -21,5 +21,4 @@ def palindrome_permutation?(string)
     end
     return results.length == 1
   end
-  return false
 end
