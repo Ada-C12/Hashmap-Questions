@@ -9,8 +9,8 @@ describe "palindrome_permutation?" do
     expect(palindrome_permutation?("carrace")).must_equal true
   end
 
-  it "will work for 'mom' -- even string" do
-    expect(palindrome_permutation?("mom")).must_equal true
+  it "will work for 'terret' -- even string" do
+    expect(palindrome_permutation?("terret")).must_equal true
   end
 
   it "will work for emptystring" do
