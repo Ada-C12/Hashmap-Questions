@@ -9,12 +9,17 @@ def palindrome_permutation?(string)
     end
   end
   
+  results = []
   if string.length % 2 == 0
-    even_array = hash.values
-    return even_array.all? { |num| num.even? }
+    string.each_char do |char|
+      results << char if hash[char].odd?
+    end
+    return results.length == 0
   else
-    odd_array = hash.values.reject { |num| num.even? }
-    return true if odd_array.length == 1
+    string.each_char do |char|
+      results << char if hash[char].odd?
+    end
+    return results.length == 1
   end
   return false
 end
