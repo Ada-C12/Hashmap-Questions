@@ -1,28 +1,29 @@
+# Time: O(n), where n = length of the longer string
+# Space: O(1) ??? b/c finite number of characters in existence
 
 def permutations?(string1, string2)
   # take two strings as arguments and returns true if one string is a permutation of the other
   
-  hash = {}
+  inventory_hash = {}
   string1.split("").each do |char|
-    if hash[char]
-      hash[char] += 1
+    if inventory_hash[char]
+      inventory_hash[char] += 1
     else
-      hash[char] = 1
+      inventory_hash[char] = 1
     end
   end
   
-  puts hash
   string2.split("").each do |char|
-    if ! hash[char]
+    if ! inventory_hash[char]
       return false
-    elsif hash[char] == 1
-      hash[char] = nil
-    elsif hash[char] > 1
-      hash[char] -= 1
+    elsif inventory_hash[char] == 1
+      inventory_hash[char] = nil
+    elsif inventory_hash[char] > 1
+      inventory_hash[char] -= 1
     end
   end
   
-  hash.values.each do |value|
+  inventory_hash.values.each do |value|
     return false if value
   end
   
