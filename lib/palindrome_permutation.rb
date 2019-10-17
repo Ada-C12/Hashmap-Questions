@@ -29,7 +29,9 @@ def palindrome_permutation?(string)
       count += 1
     end
   end
-  return count.odd? ? true : false
-  # return (odd_array.count.odd? > 1) && count.odd? ? false : true
-  
+  if odd_array.count > 1
+    return false
+  else
+    return count.odd? ? true: false
+  end
 end
