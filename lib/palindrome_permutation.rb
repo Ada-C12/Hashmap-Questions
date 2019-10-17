@@ -1,8 +1,11 @@
 
 def palindrome_permutation?(string)
+  # short-cricuit to get rid of teensy string
   if string.length <= 1
     return true
   end
+
+  # populates the reference hash
   string.upcase!
   hash = {}
   string.each_char do |char|
@@ -12,10 +15,13 @@ def palindrome_permutation?(string)
       hash[char] = 1
     end
   end
-  eval = hash.values
-  eval.sort! #automatically sorts in ascending order [1, 1, 3, 17 etc.]
+  
+  # will be used to evaluate unpaired letters
   return_prep = 0
-  eval.each do |value|
+
+  hash.sort_by {|key, value| value}
+
+  hash.each_value do |value|
     if value.odd?
       return_prep += 1
     end
@@ -29,4 +35,3 @@ def palindrome_permutation?(string)
     return true
   end
 end
-
