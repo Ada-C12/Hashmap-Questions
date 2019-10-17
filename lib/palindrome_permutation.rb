@@ -4,7 +4,7 @@ def palindrome_permutation?(string)
   if string.length <= 1
     return true
   end
-
+  
   # populates the reference hash
   string.upcase!
   hash = {}
@@ -18,9 +18,9 @@ def palindrome_permutation?(string)
   
   # will be used to evaluate unpaired letters
   return_prep = 0
-
+  
   hash.sort_by {|key, value| value}
-
+  
   hash.each_value do |value|
     if value.odd?
       return_prep += 1
