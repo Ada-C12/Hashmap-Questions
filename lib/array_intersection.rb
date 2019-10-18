@@ -1,11 +1,13 @@
 def intersection(list1, list2)
-  raise ArgumentError unless (list1.is_a?(Array) && list2.is_a?(Array))   
-  hash = {}
-  list1.each { |element| hash[element] = true }
+  raise ArgumentError unless (list1.is_a?(Array) && list2.is_a?(Array))  
+   
+  list1_values_hash = {}
+  list1.each {|value| list1_values_hash[value] = true }
+
   result = []
-  list2.each do |element|
-    if hash[element] == true
-      result << element
+  list2.each do |value|
+    if list1_values_hash[value] == true
+      result << value
     end
   end
   return result

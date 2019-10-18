@@ -11,11 +11,11 @@ def palindrome_permutation?(string)
     end
   end
   
-  odd_count = 0
+  odd_value_count = 0
   letter_count_hash.each_value do |value|
     if (value % 2) != 0
-      odd_count += 1
-      return false if odd_count > 1
+      odd_value_count += 1
+      return false if odd_value_count > 1
     end
   end
   
