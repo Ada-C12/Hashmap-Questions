@@ -14,6 +14,10 @@ describe "permutations?" do
   end
 
   it "returns true for 'pizza', 'pizza'" do
+    expect(permutations?("pizza", "pizza")).must_equal true
+  end
+
+  it "returns false for 'pizza', 'pasta'" do
     expect(permutations?("pizza", "pasta")).must_equal false
   end
 
