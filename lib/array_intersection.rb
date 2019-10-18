@@ -1,10 +1,8 @@
 def intersection(list1, list2)
 
   i = 0
-  # k = 0
 
   length_1 = list1.length
-  # length_2 = list2.length
   intersection = []
 
   until i > length_1
