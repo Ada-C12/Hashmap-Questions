@@ -13,7 +13,7 @@ describe "permutations?" do
     expect(permutations?("pasta", "atsap")).must_equal true
   end
 
-  it "returns true for 'pizza', 'pizza'" do
+  it "returns false for 'pizza', 'pasta'" do
     expect(permutations?("pizza", "pasta")).must_equal false
   end
 
