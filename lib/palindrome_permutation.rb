@@ -13,13 +13,11 @@ def palindrome_permutation?(string)
   hash_holder.each do |k, v|
     if v.odd?
       middle_char += 1
+      if middle_char > 1
+        return false
+      end
     end
   end
   
-  if middle_char > 1
-    return false
-  else
-    return true
-  end
-  
+  return true
 end
