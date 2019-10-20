@@ -15,7 +15,7 @@ def intersection(list1, list2)
 
   i = 0
   while i < list2.length
-    if new_hash[list2[i]] == true
+    if new_hash[list2[i]]
       new_array << list2[i]
     end
     i += 1
