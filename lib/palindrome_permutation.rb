@@ -1,6 +1,8 @@
 
 def palindrome_permutation?(string)
   hash = {}
+  #Assign all unique letters to a key in hash
+  #Assign their occurrences in the string to their value
   string.each_char do |char|
     if !hash.has_key? char 
       hash[char] = 1 
@@ -9,19 +11,14 @@ def palindrome_permutation?(string)
     end 
   end 
   
-  if string.length % 2 && hash.values.all? {|v| v == 2}
-  elsif 
-  #How many pairs of letters should there be?
-  #The string % 3 
-    letter_pairs =  3 % string.length 
-  
-    #There should only be ONE KEY element with a value of 1
-    #There should be stringlength-1 elements with a value of 2
-    hash.key(1).length == 1 
-    letter_pairs == hash.values.select {|v| v == 2}.length 
-    
+  #Loop through each value in the key
+  #If even; we want to make sure that each key contains an even number of occurrences
+  #If odd; we want to check that there is only one key/value pair that has an odd number of occurrences 
+  odd_letter = 0
+  hash.each_value do |value|
+    if value % 2 != 0 
+      odd_letter += 1
+    end 
   end 
-  
-
-end
-
+  return odd_letter <= 1 
+end 
