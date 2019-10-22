@@ -3,25 +3,35 @@
 #palindrome_permutation?("carrace") => true # because racecar is a palindrome
 
 def palindrome_permutation?(string)
-  string2 = reverse_string(string)
+  hash_check = {}
   
-  if string2 == string
+  if hash_check.nil?
     return true
-  else 
+  end 
+  
+  string.chars.each do |letter|
+    if hash_check[letter] .nil?
+      hash_check[letter] = 1
+    else
+      hash_check[letter] +=1
+    end 
+  end 
+  
+  odd_count = 0
+  hash_check.each do |key, value|
+    if value % 2 == 1
+      odd_count += 1  
+    end
+  end 
+  
+  if odd_count <= 1
+    return true
+  else
     return false
   end 
-end
-
-def reverse_string(string)
-  rev_string = []
-  i = string.length - 1
-  
-  while i >= 0
-    rev_string << string[i]
-    i-=1
-  end
-  return rev_string.join
-end
+end 
 
 # pp palindrome_permutation?("ada")
 # pp palindrome_permutation?("hello")
+# pp palindrome_permutation?("carrace")
+
