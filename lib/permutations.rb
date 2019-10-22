@@ -1,3 +1,5 @@
+# Time complexity: O(n)
+# Space complexity: O(n)
 
 def permutations?(string1, string2)
   if string1.nil? ||

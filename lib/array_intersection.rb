@@ -1,3 +1,6 @@
+# Time complexity: O(n) 
+# Space complexity: O(n)
+
 def intersection(list1, list2)
   if list1.nil? ||
     list2.nil? ||
@@ -17,6 +20,5 @@ def intersection(list1, list2)
     end
     return intersection
   end
-
 end
 

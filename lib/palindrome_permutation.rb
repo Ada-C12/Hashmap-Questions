@@ -1,3 +1,5 @@
+# Time complexity: O(n)
+# Space complexity: O(n)
 
 def palindrome_permutation?(string)
   if string.nil?
