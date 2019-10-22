@@ -5,9 +5,9 @@
 def palindrome_permutation?(string)
   hash_check = {}
   
-  if hash_check.nil?
-    return true
-  end 
+  # if hash_check.nil?
+  #   return true
+  # end 
   
   string.chars.each do |letter|
     if hash_check[letter] .nil?
