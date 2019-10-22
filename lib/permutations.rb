@@ -11,18 +11,15 @@ def permutations?(string1, string2)
   i = string1.chars
   j = string2.chars
   hash = {}
-  hash1 = {}
-
   
   i.each do |char|
-    hash1[char] = true
+    hash[char] = true
   end
 
   j.each do |char|
-    if hash[char] == false
+    if hash[char] == nil
       return false
-    else
-      return true
     end
   end
+  return true
 end
