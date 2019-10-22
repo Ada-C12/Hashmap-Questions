@@ -9,7 +9,7 @@ def intersection(list1, list2)
   result = []
   list2.each do |element|
     if list1_hash[element]
-      result << number
+      result << element
     end
   end
   return result
