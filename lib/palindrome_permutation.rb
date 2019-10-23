@@ -19,14 +19,11 @@ def palindrome_permutation?(string)
   values_array.each do |num|
     if num.odd? == true
       count += 1
+      if count > 1
+        return false
+      end
     end
   end
-
-  if count > 1
-    return false
-  else
-    return true
-  end
-
+  return true
 end
 
