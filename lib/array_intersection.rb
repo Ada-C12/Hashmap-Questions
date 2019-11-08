@@ -5,6 +5,7 @@
 #intersection([9, 30, 42], [56, 34, 90, 32]) => []
 
 def intersection(list1, list2)
+
   listone_hash = {}
   answer = []
   
