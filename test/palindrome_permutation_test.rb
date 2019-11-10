@@ -16,9 +16,9 @@ describe "palindrome_permutation?" do
     expect(palindrome_permutation?("")).must_equal true
   end
   
-  # count of all letters is odd
-  it "returns false for 'rhythm'" do
-    expect(palindrome_permutation?("phooey")).must_equal false
+  # odd number of hash keys
+  it "returns true for 'dumdumdum'" do
+    expect(palindrome_permutation?("dumdumdum")).must_equal true
   end
   
 end

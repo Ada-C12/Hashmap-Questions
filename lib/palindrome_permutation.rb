@@ -22,7 +22,7 @@ def palindrome_permutation?(string)
   end
   
   # apply logic for palindrome rules
-  if hash.keys.count % 2 == 0
+  if hash.values.count % 2 == 0
     hash.values.each do |value|
       if value % 2 == 0
         return true
@@ -30,11 +30,14 @@ def palindrome_permutation?(string)
         return false
       end
     end 
-    # elsif
-    #   if hash.keys.count % 2 == 1
-    #   end
   else
-    return false
+    hash.values.each do |value|
+      if value % 2 == 1
+        return true
+      else
+        return false
+      end
+    end
   end
   
 end
