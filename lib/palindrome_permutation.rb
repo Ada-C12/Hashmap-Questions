@@ -1,24 +1,19 @@
 require_relative "helper_method"
 
 def palindrome_permutation?(string)
-  if string == ""
-    return true
-  elseif string.length.even? == true
-    return false
-  end
-
+  return true if string == ""
   hash = string_to_hash(string)
 
-  tracker = []
+  count = 0
   hash.each do |k, v|
     if v.odd? == true
-      tracker << k
+      count += 1
     end
   end 
 
-  if tracker.length != 1
-    return false
-  else 
+  if count < 2
     return true
+  else 
+    return false
   end
 end
