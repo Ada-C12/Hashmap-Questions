@@ -1,9 +1,7 @@
 require_relative "helper_method"
 
 def permutations?(string1, string2)
-  if string1.length != string2.length
-    return false
-  end
+  return false if string1.length != string2.length
 
   hash1 = string_to_hash(string1)
   hash2 = string_to_hash(string2)
