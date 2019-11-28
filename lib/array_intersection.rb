@@ -1,15 +1,13 @@
 def intersection(list1, list2)
-  hash = {}
+  union_hash = {}
   list1.each do |num|
-    hash.merge!("#{num}": num)
+    union_hash[num] = true
   end
 
-  intersection = []
+  inter_arry = []
   list2.each do |num|
-    if hash.key?(:"#{num}") == true
-      intersection << num
-    end
+    inter_arry << num if union_hash[num]
   end 
 
-  return intersection
+  return inter_arry
 end
